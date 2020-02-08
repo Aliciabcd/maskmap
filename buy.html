@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+        <meta http-equiv="Content-Type"         content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible"      content="IE=edge,chrome=1">
+		<meta http-equiv="content-language"     content="zh-tw">
+		<meta name="format-detection"			content="telephone=no">
+        <meta name="viewport"                   content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=contain "> 
+        <title>全台口罩訊息｜健保特約藥局與衛生所地圖</title>
+        <meta name="application-name"           content="全台口罩訊息｜健保特約藥局與衛生所地圖"/>
+        <meta name="keywords"                   content="口罩,藥局,健保卡,">
+        <meta name="description"                content="中國大陸新型冠狀病毒肺炎（武漢肺炎）疫情持續升溫，中央流行疫情指揮中心宣布將於2月6日採實名制口罩販售，並於當日上午9點鐘正式上線，民眾須至健保特約藥局購買口罩，偏鄉地區則由當地衛生所代為處理。">
+        <meta name="URL"                        content="">
+        <meta property="og:type"				content="website" />
+    	<meta property="og:site_name"			content="全台口罩訊息｜健保特約藥局與衛生所地圖" />
+    	<meta property="og:title"				content="全台口罩訊息｜健保特約藥局與衛生所地圖" />
+    	<meta property="og:description"			content="中國大陸新型冠狀病毒肺炎（武漢肺炎）疫情持續升溫，中央流行疫情指揮中心宣布將於2月6日採實名制口罩販售，並於當日上午9點鐘正式上線，民眾須至健保特約藥局購買口罩，偏鄉地區則由當地衛生所代為處理" />
+    	<meta property="og:url"					content="" />
+    	<meta property="og:image"				content="" />
+    	<meta property="og:image:width"			content="1200" />
+    	<meta property="og:image:height"		content="630" />
+        <meta property="og:ttl"                 content="345600" />
+		<meta name="author" content="{設計} Alicia與貓｜{程式} Tyler">
+		<meta name="copyright" content="{設計} Alicia與貓｜{程式} Tyler Copyright © All rights reserved">
+
+
+		<link rel="stylesheet" type="text/css" href="css_maskmap/reset.css">
+		<link rel="stylesheet" type="text/css" href="css_maskmap/pushy.css">
+		<link rel="stylesheet" type="text/css" href="css_maskmap/theme_maskmap_mix.css">
+
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+			integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+			crossorigin="" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+		<link rel="stylesheet" href="css_maskmap/MarkerCluster.css" />
+		<link rel="stylesheet" href="css_maskmap/MarkerCluster.Default.css" />
+
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+
+		<!-- for Android header bar color -->
+		<meta name="theme-color"                content="#6CC24A" />
+		<!-- for ios Android icon -->
+		<link rel="icon"            sizes="128x128"            href="img/device/touch-icon-128x128.png">
+		<link rel="icon"            sizes="192x192"            href="img/device/touch-icon-192x192.png">
+		<!-- for ios favicon icon -->
+		<link rel="apple-touch-icon-precomposed"            sizes="57x57"            href="img/device/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon-precomposed"            sizes="72x72"            href="img/device/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon-precomposed"            sizes="114×114"          href="img/device/apple-touch-icon-114×114.png">
+		<link rel="apple-touch-icon-precomposed"            sizes="144x144"          href="img/device/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon-precomposed"            sizes="60x60"            href="img/device/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon-precomposed"            sizes="76x76"            href="img/device/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon-precomposed"            sizes="120x120"          href="img/device/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon-precomposed"            sizes="152x152"          href="img/device/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon-precomposed"            sizes="180x180"          href="img/device/apple-touch-icon-180x180.png">
+		<meta name="apple-mobile-web-app-capable"                                    content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style"                           content="black" />
+	
+
+
+	</head>
+
+	<body>
+	
+		<!-- Header -->
+		<header class="HeadNav ">
+			<div class="Row ">
+				<!-- M版 - Pushy Menu -->
+				<div class="NavBtn">
+					<div class="hamburger-menu menu-btn MenuBtn " aria-label="選單">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<!-- Nav選單內容 -->
+					<nav class="pushy pushy-left">
+						<div class="SiteBrand">
+							<a class="Logo" href="index.html" arial-label="全台口罩訊息">
+								<img src="img/mask-map-white.svg" calss="" aria-label="全台口罩訊息" alt="全台口罩訊息">
+								<span>健保特約藥局與衛生所地圖</span>
+							</a>
+						</div>
+						<div class="MenuItem">
+							<ul>
+								<li><a href="index.html">口罩地圖</a></li>
+								<li><a href="buy.html">購買須知</a></li>
+								<li><a href="https://line.me/R/ti/p/@taiwancdc" target="_blank">疾管署官方Line</a></li>
+							</ul>
+						</div>
+						<div class="InfoText">
+							<p class="Phone"><b>疫情通報專線 <span>(全年無休免付費)</span></b></br>1922 或</br>0800-001922</br></p>
+							<ul class="Note">
+								<li>每10分鐘更新一次，數量以藥局實際存量為主，線上查詢僅供參考。</li>
+								<li>勤洗手，請將口罩留給需要的人</li>
+							</ul>
+						</div>
+	
+						<!-- 網站copyright -->
+						<div class="BottomInfo">
+							<div class="Text">
+								<p>全台口罩訊息｜健保特約藥局與衛生所地圖&emsp;資料來源：<a href="https://www.fda.gov.tw/TC/siteContent.aspx?sid=11139" target="_blank">衛福部食藥署</a>｜
+									<a href="https://www.cdc.gov.tw/" target="_blank">衛福部疾病管制署</a>｜
+									<a href="https://www.mohw.gov.tw/cp-16-51370-1.html" target="_blank">衛生福利部</a>｜
+									<a href="https://www.facebook.com/moea.gov.tw/" target="_blank">經濟部Facebook</a>
+								</p>
+								<p><span>{設計} Alicia與貓｜{程式} Tyler</span></p>
+							</div>
+						</div>
+						<!-- End 網站copyright -->
+	
+					</nav>
+					<!-- End Nav選單內容 -->
+	
+	
+	
+				</div>
+				<!-- End M版 - Pushy Menu -->
+	
+				<!-- D版 -->
+				<div class="NavLogo" role="link">
+					<div class="SiteBrand" id="Site-Logo">
+						<a class="Logo" href="index.html">
+							<img class="StanderColor" src="img/mask-map.svg" arial-label="全台口罩訊息" alt="全台口罩訊息"
+								title="全台口罩訊息">
+							<span>健保特約藥局與衛生所地圖</span>
+						</a>
+					</div>
+	
+				</div>
+				<div class="InfoText">
+					<p class="Phone"><b>疫情通報專線</b></br>1922或0800-001922</br><span>(全年無休免付費)</span></p>
+					<ul class="Note">
+						<li>每10分鐘更新一次</li>
+						<li>勤洗手，請將口罩留給需要的人</li>
+					</ul>
+				</div>
+				<div class="MenuItem">
+					<ul>
+						<li><a href="index.html">口罩地圖</a></li>
+						<li><a class="active" href="buy.html">購買須知</a></li>
+						<li><a href="https://line.me/R/ti/p/@taiwancdc" target="_blank">疾管署官方Line</a></li>
+					</ul>
+	
+				</div>
+				<!-- End D版 -->
+	
+	
+			</div>
+	
+	
+	
+		</header>
+		<!-- End Header -->
+
+		<main class="PageContent">
+			<h1>口罩購買須知</h1>
+			<h2>口罩實名制2/6上路</br><span>國人</span>及<span>外籍人士</span>購買相關規定</h2>
+
+			<div class="Content">
+				<article class="InfoBlock Taiwan">
+					<h3>本國人具健保加保資格</h3>
+					<ul>
+						<li>已有健保卡者，請持健保卡至健保特約藥局購買。</li>
+						<li>無健保卡者，請儘速辦理加保手續或補換發健保卡後，持健保卡購買。</li>
+						<li>尚未加保者，請持身分證或戶口名簿購買。</li>
+					</ul>
+					<p class="PurLimit">每人每張證(卡)可購買2片口罩，且7天內不能重複購買。</p>
+					<section class="IdNo">
+						<p class="CardNo">身分證字號末碼</p>
+						<p>雙號者(0、2、4、6、8)於每週二、四、六購買；</p>
+						<p>單號者(1、3、5、7、9)可於每週一、三、五購買；</p>
+						<p>週日則開放全民皆可購買。</p>
+					</section>
+				
+				</article>
+				
+				<article class="InfoBlock Foreigner">
+					<h3>外籍人士</h3>
+					<ul>
+						<li>具有健保加保身分者，請持健保卡至健保特約藥局購買。</li>
+						<li>未具健保加保資格者:外國人、外籍(大陸)配偶、陸生等，請持居留證或入出境許可證購買。</li>
+					</ul>
+					<p class="PurLimit">購買規則與本國人一樣，</br>每人每張證(卡)可購買2片口罩，且7天內不能重複購買。</p class="PurLimit">
+					<section class="IdNo">
+						<p class="CardNo">居留證或入出境許可證末碼</p>
+						<p>雙號者(0、2、4、6、8)於每週二、四、六購買；</p>
+						<p>單號者(1、3、5、7、9)可於每週一、三、五購買；</p>
+						<p>週日則開放全民皆可購買。</p>
+					</section>
+				
+				</article>
+
+				<p>民眾如有口罩相關疑問，可撥打專線<a href="tel:0955669342">1922</a>、<a href="tel:1919">1919</a>，或至<a href="www.nhi.gov.tw"
+						target="_blank">中央健康保險署全球資訊網(www.nhi.gov.tw)</a>查詢健保特約藥局，
+					健保署服務專線諮詢：市話0800-030-598或4128-678(不須加區域碼)，手機改撥<a href="tel:02-4128-678">02-4128-678</a>。</p>
+
+			</div>
+			
+
+			
+			<div class="Poster">
+				<h2>其他相關宣導</h2>
+
+				<figure>
+					<img src="img/post-who-need-mask.png" alt="口罩正確的使用時機">
+					<img src="img/post-wear-mask.png" alt="正確戴口罩4步驟">
+					<img src="img/post-foreigner-purchase.jpg" alt="NHI Cards or Resident Certificate are required to purchase Masks">
+					<img src="img/post-call1950.jpg" alt="口罩價格異常撥打1950檢舉">
+					<img src="img/post-homemade-alcohol.jpg" alt="自行配製75%酒精作法">
+					<img src="img/post-wash-hands.jpg" alt="用肥皂勤洗手、環境消毒、稀釋95%酒精">
+				</figure>
+			</div>
+
+
+		</main>
+
+
+
+
+
+		<footer>
+			<div class="Text">
+				<p>全台口罩訊息｜健保特約藥局與衛生所地圖&emsp;資料來源：<a href="https://www.fda.gov.tw/TC/siteContent.aspx?sid=11139" target="_blank">衛福部食藥署</a>｜
+					<a href="https://www.cdc.gov.tw/" target="_blank">衛福部疾病管制署</a>｜
+					<a href="https://www.mohw.gov.tw/cp-16-51370-1.html" target="_blank">衛生福利部</a>｜
+					<a href="https://www.facebook.com/moea.gov.tw/" target="_blank">經濟部Facebook</a>
+				</p>
+				<p><span>{設計} Alicia與貓｜{程式} Tyler</span></p>
+			</div>
+		</footer>
+
+
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="//d3js.org/d3.v3.min.js"></script>
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+			integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+			crossorigin=""></script>
+		<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+		<script src="js/leaflet.markercluster-src.js"></script>
+		<script src="js/maskmap.js"></script>
+		<script src="js/pushy.js"></script>
+		
+	</body>
+
+</html>

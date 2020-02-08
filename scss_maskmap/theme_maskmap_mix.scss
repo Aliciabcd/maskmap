@@ -1,0 +1,1498 @@
+// 網站字型
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700|Roboto:400,500,700&subset=chinese-traditional');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900&display=swap');
+
+// 網站顏色設定
+@import "color.scss";
+
+
+
+/*==========基本預設設定============*/
+/*基本設定*/
+html{
+	min-width:320px;
+}
+html, body, pre, option, input, select, textarea{
+	font-family:'Roboto','Noto Sans TC', "Noto Sans CJK JP",'Titillium Web', sans-serif;
+	font-size:75%;
+	font-weight:300;
+	color: #4d4d4d;
+}
+html, body, div, section, article, address{
+	box-sizing: border-box;
+}
+
+
+/*字級基本預設設定*/
+p, span, pre{
+	font-size: 1.25rem;
+	line-height: 1.95rem;
+	font-weight: normal;
+	margin-top:2px;
+	margin-bottom:2px;
+	text-decoration: none;
+}
+
+a{
+	font-size: 1.25rem;
+	line-height: 1.95rem;
+	font-weight: normal;
+	text-decoration: none;
+	color: #2c2c2c;
+
+	&:hover{
+		color:black;
+	}
+}
+
+
+
+h1{
+	font-size:2.75rem;
+	line-height: 3.15rem;
+	font-weight: 300;
+	margin-top:6px;
+	margin-bottom: 6px;
+}
+h2{
+	font-size:2.25rem;
+	line-height: 2.85rem;
+	font-weight: 300;
+	margin-top:5px;
+	margin-bottom: 5px;
+}
+h3{
+	font-size: 2.05rem;
+	line-height: 2.55rem;
+	font-weight: normal;
+	margin-top:4px;
+	margin-bottom:4px;
+}
+h4{
+	font-size: 1.85rem;
+	line-height: 2.05rem;
+	font-weight: normal;
+	margin-top:3px;
+	margin-bottom:3px;
+}
+h5{
+	font-size: 1.6rem;
+	line-height: 2.05rem;
+	font-weight: normal;
+	margin-top:3px;
+	margin-bottom:3px;
+}
+h6{
+	font-size: 1.35rem;
+	line-height: 1.75rem;
+	font-weight: normal;
+	margin-top:3px;
+	margin-bottom:3px;
+}
+
+
+ul{
+    -webkit-margin-before:0;
+    -webkit-margin-after:0;
+    -webkit-margin-start:0;
+    -webkit-margin-end:0;
+    -webkit-padding-before:0;
+    -webkit-padding-after:0;
+    -webkit-padding-start:0;
+    -webkit-padding-end:0;
+    margin-before:0;
+    margin-after:0;
+    margin-start:0;
+    margin-end:0;
+    padding-befor:0;
+    padding-after:0;
+    padding-start:0;
+    padding-end:0;
+    padding-left:0;
+    padding-right:0;
+	list-style-type: none;
+	
+	
+	@media screen and (min-width:890px){
+		-webkit-margin-before:0;
+		-webkit-margin-after:0;
+		-webkit-margin-start:0;
+		-webkit-margin-end:0;
+		-webkit-padding-before:0;
+		-webkit-padding-after:0;
+		-webkit-padding-start:0;
+		-webkit-padding-end:0;
+		list-style-type: none;
+		display:inline-block;
+		
+	}
+
+}
+
+
+input[type=text],
+input[type=number],
+select{
+    font-size: 1.58rem;
+    padding:8px;
+    border:1px solid #c7c7c7;
+    margin-bottom: 0px;
+    background:white;
+    color:#4d4d4d;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill{
+    background-color: white;
+}
+input[type=submit]{
+	border-width:0px;
+}
+body{
+	margin:0px;
+	padding:0px;
+	position: relative;
+	text-align: unset;
+}
+
+::selection{
+	background: $colorSecond-Selection;
+	color:white;
+}
+/* [基本設定] placeholder */
+.placeholderColor{
+  color:#c7c7c7;
+}
+/* [基本設定] input placeholder*/
+input::-webkit-input-placeholder{
+  color:#c7c7c7;
+}
+input::-moz-placeholder{
+  color:#c7c7c7;
+}
+input:-ms-input-placeholder{
+  color:#c7c7c7;
+}
+input:-moz-placeholder{
+  color:#c7c7c7;
+}
+/* [基本設定] textarea placeholder*/
+textarea::-webkit-input-placeholder{
+  color:#c7c7c7;
+}
+textarea::-moz-placeholder{
+  color:#c7c7c7;
+}
+textarea:-ms-input-placeholder{
+  color:#c7c7c7;
+}
+textarea:-moz-placeholder{
+  color:#c7c7c7;
+}
+
+
+
+
+
+
+// 去除ios預設樣式
+input,
+input[type=button],
+input[type=text],
+input[type=submit],
+main select,
+textarea,
+button{
+	-webkit-appearance: none;
+	appearance: none;
+	border-radius: 0;
+	-webkit-border-radius:0;
+	margin:0px;
+}
+button{
+	margin:0px;
+}
+
+
+
+
+/* footer */
+footer{
+	width:100%;
+	min-height:50px;
+	color:white;
+	background:$colorSecond-Selection;
+	padding-top:5px;
+	padding-bottom:10px;
+	box-sizing: border-box;
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	position: relative;
+	
+	@media screen and (max-width:889px) {
+		display:none;
+	}
+
+	.Text{
+		width:90%;
+		margin:0 auto;
+		float:left;
+		text-align:center;
+
+		p{
+			font-size:1.15rem;
+			line-height:1.5rem;
+
+			a{
+				color:$colorSecond-Note-Yellow;
+				font-size:1.15rem;
+				line-height:1.5rem;
+
+				&:hover{
+					color:white;
+				}
+			}
+			
+			span{
+				font-size:1rem;
+			}
+		}
+	}
+
+
+}
+
+/* End footer */
+
+
+
+*{
+	box-sizing: border-box;
+}
+
+
+/* ************************************************************* 
+Header
+************************************************************* */
+.HeadNav{
+	background:white;
+    width:100%;
+	height:60px;
+	opacity:0.97;
+	border:none;
+	position:fixed;
+	top:0;
+	right:0;
+    z-index: 1080;
+	padding-top:constant(safe-area-inste-top);
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+	transition: 0.7s all ease 0.1s;
+	box-sizing: border-box;
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	
+	@media screen and (max-width:889px){
+		.InfoText,
+		.MenuItem,
+		.BottomInfo{
+			display:none;
+		}
+	}
+
+	@media screen and (min-width:320px){
+		.pushy{
+			.InfoText,
+			.MenuItem,
+			.BottomInfo{
+				display:block;
+			}
+		}
+
+	}
+
+	@media screen and (min-width:890px){
+		height:88px;
+		overflow: hidden;
+		display: block;
+    	padding-top: 6px;
+	}
+
+}
+
+
+
+.Row{
+	width:calc(100% - 12px);
+	margin-left:6px;
+	margin-right:6px;
+	margin-top:0px;
+	float: left;
+
+	
+	
+
+	@media screen and (min-width:890px){
+		width:90%;
+		margin-left:5%;
+		margin-right:5%;
+		display: flex;
+		align-items: center;
+		
+		
+	}
+
+	@media screen and (min-width:1351px){
+		width:80%;
+		margin-left:10%;
+		margin-right:10%;
+	}
+
+
+	
+}
+
+/* Header- (PushyMenu)  */
+.NavBtn{
+    width: 40px;
+	float:left;
+    position: absolute;
+    top: 12px;
+    left: 5px;
+	height: 35px;
+	display: flex;
+    align-items: center;
+		
+
+	@media screen and (min-width:890px){
+        display: none;
+	}
+
+	/* Header- (PushyMenu) - 選單內容 */
+	.pushy{
+		background:$colorMain;
+		opacity:1;
+		z-index: 9999;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+
+
+		&.pushy-left{
+			overflow-y:scroll;
+			overflow-x: hidden;
+		}
+		.SiteBrand{
+			width:100%;
+			margin-top:0px;
+			display:flex;
+			align-items:flex-start;
+			justify-content: center;
+			padding-top:5px;
+			padding-bottom:5px;
+
+			.Logo{
+				width:208px;
+
+				span{
+					@media screen and (max-width:889px) {
+						font-size:1.1rem;
+						margin: -2px calc(-25% / 2);
+						width: 125%;
+						display: block;
+						text-align: center;
+						line-height: 1.1rem;
+						color:white;
+					}
+				}
+			}
+
+			
+		}
+
+		.InfoText{
+			@media screen and (max-width:889px){
+				width:80%;
+				margin:0 auto;
+				color:white;
+				
+
+				p, ul{
+					line-height: 2.25rem;
+
+					&.Phone{
+						padding:10px;
+						border:1px dashed white;
+
+						b{
+							font-weight: bold;
+
+							span{
+								display:inline-block;
+								font-size:1.2rem;
+							}
+						}
+					}
+
+					&.Note{
+						font-size:1.38rem;
+						margin-top:8px;
+
+						li{
+							border-bottom:1px dashed $colorSecond-Note-Yellow;
+							margin-bottom:1px;
+							padding:3px 0px;
+						}
+					}
+				}
+			}
+			
+
+		}
+
+		.MenuItem{
+			@media screen and (max-width:889px){
+				width:80%;
+				margin:20px auto;
+
+				ul{
+					display:block;
+
+					li{
+						width:100%;
+						margin:15px 0px;
+
+						a{
+							color:white;
+							background:$colorMain;
+							border-color:white;
+							padding:10px 8px;
+							box-shadow: 0px 0px 6px rgba(0,0,0,0.35);
+						}
+					}
+				}
+			}
+			
+			
+
+		}
+
+		.BottomInfo{
+			background:$colorSecond-Selection;
+			width:100%;
+			bottom:0px;
+			padding:5px 10px;
+			margin-top:20px;
+			box-sizing: border-box;
+			min-height:60px;
+			font-size:1.1rem;
+			line-height:1.68rem;
+			color:white;
+
+			p{
+				font-size:1.1rem;
+				line-height:1.68rem;
+				font-weight: normal;
+				
+				a{
+					font-size:1.1rem;
+					line-height:1.68rem;
+					padding:0px;
+					color:$colorSecond-Note-Yellow;
+					display: inline;
+
+				}
+
+				span{
+					font-size:1rem;
+					color:white;
+					display:block;
+				}
+			}
+		}
+	}
+	/* End Header- (PushyMenu) - 選單內容 */
+
+}
+
+
+
+// Header- (PushyMenu) - 漢堡選單icon
+$hamburger__width                  : 35px;
+$hamburger__transition-speed       : .25s;
+$hamburger__bar-height             : 3px;
+$hamburger__bar-gap                : 7px;
+$hamburger__bar-color              : #6CC24A;
+$hamburger__bar-rotation-adjustment: $hamburger__bar-height + $hamburger__bar-gap;
+.NavBtn{
+	.MenuBtn{
+		position: fixed;
+		cursor:pointer;
+		z-index: 999999;
+	}
+	.hamburger-menu {
+		width: $hamburger__width;
+		cursor: pointer;
+		height: 35px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		
+		span {
+			display: block;
+			width: 100%;
+			height: $hamburger__bar-height;
+			background-color: $hamburger__bar-color;
+			transition: $hamburger__transition-speed;
+			margin-top:3px;
+			margin-bottom:3px;
+
+			&:not(:first-child) {
+				margin-top: $hamburger__bar-gap;
+			}
+
+		}
+	}
+}
+body.pushy-open-left .hamburger-menu{
+	span{
+		&:nth-child(1) { 
+			transform: translate(0px,10px) rotate(135deg); 
+			background:white;
+		}
+		&:nth-child(2) { 
+			opacity: 0; 
+			transition: .1s; 
+		}
+		&:nth-child(3) { 
+			transform: translate(0px,-16px) rotate(-135deg); 
+			background:white;
+		}
+	}
+}
+body.header-fixed.pushy-open-left {
+	.NavBtn{
+		top:12px;
+	}
+}
+/* End Header- (PushyMenu) - 漢堡選單icon */
+/* end Header- (PushyMenu)  */
+
+
+
+
+
+/* Header - (NavLogo) */
+.NavLogo{
+	float:left;
+	margin-left: calc((100% - 140px - 12px )/2);
+	position: absolute;
+	top: 6px;
+
+	
+	@media screen and (min-width:890px){
+		margin-left:0px;
+		position: relative;
+		top:0px;
+	}
+
+
+	.SiteBrand{
+		width: 140px;
+		padding:0;
+		margin:0 auto;
+		float:left;
+
+		@media screen and (min-width:890px){
+			width:220px;
+			margin-top:0px;
+			position:relative;
+			float:left;
+			transition: 0.7s all;
+		}
+
+		.Logo{
+			float:left;
+
+			span{
+				margin-left:5px;
+
+				@media screen and (max-width:889px) {
+					font-size:1rem;
+					margin: 2px calc(-25% / 2);
+					width: 125%;
+					display: block;
+					text-align: center;
+					line-height: 1.1rem;
+				}
+			}
+
+			.StanderColor{
+				display:block;
+			}
+		}
+
+	}
+
+
+}
+
+
+.SiteBrand img{
+	width:100%;
+}
+
+.InfoText{
+	width:50%;
+	// background:lightcyan;
+	margin-left:8px;
+
+	p, ul{
+		font-family:"Noto Sans CJK JP",'Roboto',sans-serif;
+		font-weight: 700;
+		font-size:2.25rem;
+
+		b{
+			font-family:"Noto Sans CJK JP",sans-serif;
+			font-weight: bold;
+			font-size:1.58rem;
+			line-height: 1.8rem;;
+		}
+		span{
+			font-size:1rem;
+			line-height: 1.2rem;
+		}
+	}
+
+	@media screen and (min-width:890px){
+		width:42.5%;
+		max-height:80px;
+		display:flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		overflow: hidden;
+
+		p, ul{
+			width:calc((100% - 10px )/2);
+			margin-top:0px;
+			margin-bottom:0px;
+			margin-right:10px;
+			box-sizing: border-box;
+			padding:2px 4px;
+			min-height:75px;
+			
+
+			&.Phone{
+				font-size:1.38rem;
+				border:1px dashed $colorDefault-Gray;
+			}
+			&.Note{
+				font-size:1rem;
+				line-height:1.35rem;
+				margin-right:0px;
+
+				li{
+					border-bottom:1px dashed $colorDefault-Gray;
+					margin-bottom:2px;
+					padding:5px 0px;
+					color:$colorSecond-Blue;
+				}
+			}
+
+			b{
+				font-size:1.28rem;
+				line-height: 1.6rem;
+			}
+			span{
+				font-size:1rem;
+				line-height: 1.35rem;
+				display: block;
+			}
+		}
+	}
+
+	@media screen and (min-width:1100px) {
+		width:44.5%;
+		
+		p, ul{	
+
+			&.Phone{
+				font-size:1.65rem;
+			}
+			&.Note{
+				font-size:1.15rem;
+			}
+
+			b{
+				font-size:1.28rem;
+				line-height: 1.6rem;;
+			}
+			span{
+				font-size:1.1rem;
+				line-height: 1.25rem;
+			}
+		}
+	}
+
+	@media screen and (min-width:1351px) {
+		
+		p, ul{	
+
+			&.Phone{
+				font-size:1.95rem;
+			}
+			&.Note{
+				font-size:1.25rem;
+			}
+
+			b{
+				font-size:1.38rem;
+				line-height: 1.8rem;
+			}
+			span{
+				font-size:1.28rem;
+				line-height: 1.35rem;
+			}
+		}
+	}
+
+	
+
+
+}
+
+
+
+.MenuItem{
+	// width:calc(100% - 50% - 230px);
+	// background:lightpink;
+
+
+	ul{
+		display:flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		li{
+			margin:0px 4px;
+
+			&:last-of-type{
+				margin-right:0px;
+			}
+
+			a{
+				border:1px solid $colorMain;
+				padding:8px 8px;
+				background:white;
+				color:$colorMain;
+				font-size:1.8rem;
+				line-height: 1.8rem;
+				border-radius: 6px;
+				display:block;
+
+				&:hover{
+					background:$colorMain;
+					color:white;
+					box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+				}
+
+				&.active{
+					background:$colorMain;
+					color:white;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width:890px){
+		width:calc(100% - 42.5% - 230px);
+
+		ul{
+			li{
+				a{
+					font-size:1.28rem;
+					line-height: 1.5rem;
+					text-align: center;
+				}
+			}
+		}
+
+	}
+
+	@media screen and (min-width:1100px){
+		width:calc(100% - 44.5% - 230px);
+
+		ul{
+			li{
+				a{
+					font-size:1.4rem;
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+/* ************************************************************* 
+End Header
+************************************************************* */
+
+
+/* ************************************************************* 
+[Page]地圖資訊
+************************************************************* */
+html, body{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+
+	@media screen and (min-width:890px) {
+		height: calc(100% - 6px);
+	}
+}
+
+body{
+	background:$colorDefault-WarmWhite;
+}
+#map{
+	width: calc(100% - 290px);
+	height: calc(100% - 50px);
+	background: $colorSecond-LightBlue;
+	margin-left: 290px;
+
+
+
+	@media screen and (max-width:889px) {
+		width:100%;
+		margin-left:0px;
+	}
+}
+
+	
+
+/* CSS3 Transition to fade-in highlight style */
+svg.leaflet-zoom-animated > g > path {
+	transition-property: fill, fill-opacity, stroke, stroke-opacity, stroke-width;
+	transition-duration: 0.4s;
+
+	stroke:$colorMain;
+	stroke-opacity: 0.68;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+	// fill: #4CAF50;
+	fill-opacity: 0;
+    fill-rule: evenodd;
+}
+
+
+// 定位popup info顯示位移
+.leaflet-popup-pane{
+	margin-top: -30px;
+}
+
+// 地圖大小控制
+.leaflet-control-container{
+	.leaflet-left{
+		.leaflet-control{
+			margin-top:20px;
+		}
+	}
+	.leaflet-top {
+		.leaflet-control{
+			margin-top:125px;
+
+			@media screen and (max-width:889px) {
+				margin-top:125px;
+			}
+		}
+	}
+}
+
+// popup design reset
+.leaflet-container {
+
+	.leaflet-popup{
+
+		.leaflet-popup-content-wrapper{
+			padding:0px;
+			color:#2c2c2c;
+
+			.leaflet-popup-content p{
+				margin:0px;
+			}
+			.leaflet-popup-content{
+				margin:0px;
+				padding:18px;
+			}
+		}
+
+
+		a.leaflet-popup-close-button{
+			width: 2.25rem;
+			height: 2.25rem;
+			font: 2rem/2rem Tahoma, Verdana, sans-serif;
+			color: #ffffff;
+		}
+	}
+}
+
+// popup redesign
+.NewPopup{
+
+	.leaflet-popup-content-wrapper{
+
+		.leaflet-popup-content{
+
+			.InfoTitle{
+				margin: -18px -18px 0px -18px;
+				padding: 18px 18px 8px;
+				background: $colorMain;
+				border-radius: 12px 12px 0px 0px;
+				font-size:1.58rem;
+				line-height:1.8rem;
+				font-weight: bold;
+				color:white;
+			}
+
+			.Info{
+				margin:5px 0px;
+
+				p{
+					font-size:1.25rem;
+					line-height:1.65rem;
+
+					b{
+						font-weight: bold;
+					}
+				}
+			}
+			.Note{
+				width:100%;
+				padding:3px 0px;
+				border-top:1px dashed $colorMain;
+				border-bottom:1px dashed $colorMain;
+				margin-bottom:5px;
+				font-size:1.1rem;
+				line-height: 1.35rem;;
+				font-weight: bold;
+
+			}
+			.Stock{
+				width:100%;
+				// background:gold;
+				font-size:1.15rem;
+				line-height:1.5rem;
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				font-weight: bold;
+
+				.Item{
+					width:50%;
+					padding:8px;
+
+					&.AdultMask{
+						background:#00b4dc;
+					}
+					&.ChildMask{
+						background:#ffd44d;
+					}
+
+					.Quantity{
+						font-size:2.25rem;
+						line-height: 2.5rem;;
+						color:white;
+						font-weight: bold;;
+					}
+				}
+
+
+			}
+
+		}
+	}
+	
+	
+}
+
+.Notice{
+	width:150px;
+	height:150px;
+	background:rgba(0,0,0,0.5);
+	box-shadow: rgba(0,0,0,0.35);
+	padding:10px;
+	position: absolute;
+	color:white;
+	top:120px;
+	right:10px;
+	z-index: 888;
+}
+.M-News{
+	width:99%;
+	background:rgba(0,138,169,0.78);
+	position: absolute;
+	top:62px;
+	left:0.5%;
+	z-index: 899;
+	
+	P{
+		font-size: 1rem;
+		line-height: 1.25rem;
+		color:white;
+		padding:3px;
+		margin:0px;
+	}
+
+	@media screen and (min-width:889px) {
+		display:none;
+	}
+}
+.M-Panel{
+	width:100%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	background:$colorMain;
+	bottom:0px;
+	height:50px;
+	z-index: 899;
+
+	@media screen and (min-width:890px){
+		display:none;
+	}
+	
+
+	form{
+		width:100%;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+
+		select{
+			font-size:1.25rem;
+			width:calc((100% - 80px)/2);
+			border-radius: 8px;
+			margin-right:4px;
+			cursor: pointer;
+
+			option{
+				font-size:1.25rem;
+			}
+		}
+
+		button{
+			font-size: 1.25rem;
+			border-style: solid;
+			width:60px;
+			border:1px solid $colorSecond-Orange;
+			background:$colorSecond-Orange;
+			color:white;
+			border-radius: 8px;
+			padding: 7px 6px;
+			cursor: pointer;
+			box-shadow:0px 0px 4px rgba(0, 0, 0, 0.35);
+		}
+	
+	}
+
+	
+
+}
+
+.ListPanel{
+	@media screen and (max-width:899px){
+		display:none;
+	}
+
+	width:280px;
+	height:calc(100% - 165px);
+	position: absolute;
+	top:95px;
+	left:5px;
+	background:rgba(255, 255, 255, 0.88);
+	padding:8px;
+	z-index: 888;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	box-shadow:0px 0px 5px rgba(0, 0, 0, 0.5);
+
+	.News{
+		background:rgba(0,138,169,0.85);
+		width:calc(100% + 16px);
+		margin:-10px -8px 10px -10px;
+
+		p{
+			padding:4px 8px;
+			color:white;
+			font-size:1.15rem;
+			line-height:1.68rem;
+		}
+	}
+
+	.StoreList{
+		width:100%;
+
+		form{
+			display:flex;
+			align-items: center;
+    		justify-content: center;
+
+			select{
+				font-size:1.25rem;
+				width:calc((100% - 40px)/2);
+				border-radius: 8px;
+				margin-right:4px;
+				cursor: pointer;
+
+				option{
+					font-size:1.25rem;
+				}
+			}
+
+			button{
+				font-size: 1.25rem;
+				border-style: solid;
+				width:60px;
+				border:1px solid $colorSecond-Orange;
+				background:$colorSecond-Orange;
+				color:white;
+				border-radius: 8px;
+				padding: 7px 6px;
+				cursor: pointer;
+				box-shadow:0px 0px 4px rgba(0, 0, 0, 0.35);
+			}
+		
+		}
+
+		
+		.ListBlock{
+			width:calc(100% + 16px);
+			margin-top:8px;
+			margin-left:-8px;
+			
+
+			.StoreItem{
+				width:100%;
+				min-height: 155px;
+				display:flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				padding:8px;
+				cursor:pointer;
+				border-bottom:1px solid $colorSecond-Denim;
+				margin-bottom:5px;
+				position: relative;
+
+				&:hover{
+					box-shadow:0px 0px 5px rgba(0, 0, 0, 0.5);
+				}
+
+				.InfoTitle{
+					width:calc(100% + 16px);
+					height:35px;
+					font-size:1.45rem;
+					background:$colorMain;
+					color:white;
+					margin-left:-8px;
+					margin-right: -8px;
+					margin-top: -8px;
+					padding:5px;
+				}
+				.Info{
+					width:calc(100% - 30% - 5px);
+					font-size:1rem;
+					line-height: 1.15rem;
+
+					p{
+						font-size:1.1rem;
+						line-height: 1.35rem;
+						b{
+							font-weight: bold;
+						}
+					}
+
+				}
+				
+				.Note{
+					width:calc(100% - 30% - 5px);
+					padding: 3px 0px;
+					border-top: 1px dashed #6CC24A;
+					border-bottom: 1px dashed #6CC24A;
+					margin-bottom: 5px;
+					font-size: 1.1rem;
+					line-height: 1.35rem;
+					font-weight: bold;
+				}
+
+				.Stock{
+					width:30%;
+					display:flex;
+					align-items: flex-start;
+					justify-content: center;
+					flex-wrap:wrap;
+					position: absolute;
+					top:38px;
+					right:0px;
+					text-align: center;
+
+					.Item{
+						width:100%;
+						// background:yellowgreen;
+						padding: 8px;
+						font-size:1rem;
+						line-height: 1.1rem;
+
+						.Quantity{
+							font-size:2rem;
+							line-height: 2.25rem;
+							color:white;
+							font-weight:bold;
+						}
+
+						&.AdultMask{
+							background:$colorSecond-Adult;
+						}
+						&.ChildMask{
+							background:$colorSecond-Child;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+/* ************************************************************* 
+End [Page]地圖資訊
+************************************************************* */
+
+
+/* ************************************************************* 
+[Page]購買須知
+************************************************************* */
+.PageContent{
+	width:100%;
+	margin-right:0;
+	margin-left:0;
+	// background:lightpink;
+	display: block;
+	padding:100px 5px 15px;
+
+
+	@media screen and (min-width:890px){
+		width:90%;
+		margin-left:5%;
+		margin-right:5%;	
+	}
+
+	@media screen and (min-width:1351px){
+		width:80%;
+		margin-left:10%;
+		margin-right:10%;
+	}
+
+
+	h1{
+		width:100%;
+		text-align: center;
+		font-weight: bold;
+		margin:20px 0px 10px;
+	}
+	h2{
+		width:100%;
+		text-align: center;
+		margin:8px 0px 15px;
+
+		span{
+			font-size: 2.25rem;
+			line-height: 2.85rem;
+			// background:$colorSecond-Note-Yellow;
+			box-shadow:0 -12px 0 rgba(255, 234, 129, 0.68) inset;
+			padding:0px 5px;
+		}
+	}
+
+	p{
+		font-size:1.58rem;
+		line-height: 2.45rem;
+		margin:8px 0px;
+	}
+
+	.Content{
+		display:flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-wrap:wrap;
+		width:100%;
+		// background:lightsteelblue;
+		padding:10px;
+
+
+		
+		.InfoBlock{
+			width:100%;
+			background:$colorSecond-Note-Yellow;
+			border-radius: 15px;
+			padding:12px;
+			text-align: left;
+			margin-bottom:18px;
+
+
+			h3{
+				font-weight: bold;
+				text-align: center;
+				width:100%;
+				padding-bottom:3px;
+				border-bottom:2px dashed white;
+				margin-bottom:0px;
+			}
+
+			ul{
+				width:100%;
+				font-size:1.5rem;
+				line-height: 2.5rem;
+				margin:0px 0px 8px;
+				padding:8px;
+				background:white;
+				border-radius: 0px 0px 12px 12px;
+
+				li{
+					list-style: decimal;
+					margin-left:23px;
+					border-bottom: 1px dashed $colorDefault-LightGray;
+				}
+			}
+
+			.PurLimit{
+				padding:10px;
+				border-radius: 12px;
+				font-weight: bold;
+				background:white;
+				color:$colorSecond-Adult;
+				font-size:1.68rem;
+				text-align: center;
+				margin:0px;
+			}
+
+			.IdNo{
+				padding:8px;
+				background:$colorSecond-Adult;
+				border-radius: 12px;
+				margin-top:8px;
+				color:white;
+				text-align: center;
+
+				p{
+					font-size:1.5rem;
+					line-height: 2.5rem;
+					margin:0px;
+				}
+
+				.CardNo{
+					font-weight: bold;
+					font-size:1.88rem;
+				}
+			}
+
+			&.Foreigner{
+				background:$colorSecond-Foreigner;
+			}
+
+			
+
+			@media screen and (min-width:890px){
+				width:calc((100% - 15px)/2);
+				margin-right:15px;
+
+				&.Foreigner{
+					margin-right:0px;
+				}
+			}
+			
+
+			
+		}
+
+		a{
+			font-size:1.5rem;
+			line-height: 2.5rem;
+			border-bottom:1px solid $colorSecond-Foreigner;
+
+			&:hover{
+				color:$colorSecond-Foreigner;
+			}
+		}
+	}
+
+	.Poster{
+		width:100%;
+		border-top:1px solid $colorMain;
+		margin-top:15px;
+
+		figure{
+			width:90%;
+			margin:0 auto;
+
+			@media screen and (min-width:890px) {
+				width:80%;
+				margin:0 auto;
+			}
+
+			img{
+				width:100%;
+				margin:18px 0px;
+
+				&:hover{
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+				}
+			}
+			
+		}
+	}
+
+	
+
+
+}
+
+
+
+
+
+/* ************************************************************* 
+End [Page]購買須知
+************************************************************* */
+
+
+
+/*強制*/
+.hidden{
+  display:none!important;
+}
+a.hidden{
+  display:none!important;
+}
+
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+
+
