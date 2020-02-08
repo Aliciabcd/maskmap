@@ -256,6 +256,11 @@ footer{
 			
 			span{
 				font-size:1rem;
+
+				a{
+					font-size:1rem;
+					line-height: 1.95rem;
+				}
 			}
 		}
 	}
@@ -506,8 +511,16 @@ Header
 
 				span{
 					font-size:1rem;
+					line-height:1.4rem;
 					color:white;
 					display:block;
+					background:rgba(255,255,255,0.05);
+					padding:4px;
+					
+					a{
+						font-size:1rem;
+						line-height:1.4rem;
+					}
 				}
 			}
 		}
