@@ -160,6 +160,7 @@ $(function () {
 
 		// Geolocation 定位 - 只能用https開啟
 		map.locate({ setView: true});
+		map.setView([25.0472453, 121.514101], 16);
 		var get_locate_state = false;
 
 		function onLocationFound(e) {
@@ -180,7 +181,7 @@ $(function () {
 			get_locate_state = false
 		}
 		map.on('locationerror', onLocationError);
-
+		
 
 		// 全台機構資料
 		store_layers = []
