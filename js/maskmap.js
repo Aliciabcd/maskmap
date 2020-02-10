@@ -259,14 +259,16 @@ $(function () {
 					feature.properties.phone + "</b></br>" +
 					feature.properties.address +
 					"</p></div>" +
-					"<div class='Note'>" + feature.properties.note + "</div>" +
+					"<div class='Note'><b>備註：</b>" + feature.properties.note + "</div>" +
+					"<div class='Note'><b>藥局公告：</b>" + feature.properties.custom_note + "</div>" +
+					"<div class='Note Web'><a href='" + feature.properties.website + " ' target='_blank'>" + feature.properties.website + "</a></div>" +
 					"<div class='Stock'> <div class='Item AdultMask'>成人口罩</br>" + "<div class='Quantity'>" + feature.properties.mask_adult + "</div></div>" +
 					"<div class='Item ChildMask'>小孩口罩</br>" + "<div class='Quantity'>" + feature.properties.mask_child + "</div></div></div>" +
 
-					"<div class='Info'>資料更新時間：" + feature.properties.updated + "</div>"
+					"<div class='Info'>更新：" + feature.properties.updated + "</div>"
 				).openOn(map)
 		}
-
+		
 		//共用切換區域之後的自動 popup 行為
 		function auto_show_dict_store(store) {
 			latlng = [store.geometry.coordinates[1], store.geometry.coordinates[0]]
@@ -278,22 +280,24 @@ $(function () {
 		function add_new_store(store){
 			latlng = [store.geometry.coordinates[1], store.geometry.coordinates[0]]
 			if (store.properties.note == "") {
-				store.properties.note = "無備註"
+				store.properties.note = "無"
 			}
-			new_item = $('<a class="StoreItem">' +
+			new_item = $('<div class="StoreItem">' +
 				'<div class= "InfoTitle" > ' + store.properties.name + '</div >' +
 				'<div class="Info"><p>' +
 				'<b>' + store.properties.phone + '</b></br>' + store.properties.address +
 				'</p></div >' +
-				'<div class="Note">' + store.properties.note + '</div>' +
+				'<div class="Note"><b>備註：</b>' + store.properties.note + '</div>' +
+				"<div class='Note'><b>藥局公告：</b>" + store.properties.custom_note + "</div>" +
+				"<div class='Note Web'><a href='" + store.properties.website + " ' target='_blank'>" + store.properties.website + "</a></div>" +
 				'<div class="Stock">' +
 				'<div class="Item AdultMask">成人口罩<br>' +
 				'<div class="Quantity">' + store.properties.mask_adult + '</div>' +
 				'</div>' +
 				'<div class="Item ChildMask">小孩口罩<br>' +
 				'<div class="Quantity">' + store.properties.mask_child + '</div></div></div>' +
-				'<div class="Info">資料更新時間：' + store.properties.updated + '</div>' +
-				'</a>')
+				'<div class="Info">更新：' + store.properties.updated + '</div>' +
+				'</div>')
 			new_item.attr("data", JSON.stringify(store))
 			new_item.on("click", function () {
 				var store = JSON.parse($(this).attr("data"))

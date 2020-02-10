@@ -993,7 +993,7 @@ svg.leaflet-zoom-animated > g > path {
 			}
 			.leaflet-popup-content{
 				margin:0px;
-				padding:18px;
+				padding:12px;
 			}
 		}
 
@@ -1015,8 +1015,8 @@ svg.leaflet-zoom-animated > g > path {
 		.leaflet-popup-content{
 
 			.InfoTitle{
-				margin: -18px -18px 0px -18px;
-				padding: 18px 18px 8px;
+				margin: -12px -12px 0px -12px;
+				padding: 12px 12px 6px;
 				background: $colorMain;
 				border-radius: 12px 12px 0px 0px;
 				font-size:1.58rem;
@@ -1027,10 +1027,12 @@ svg.leaflet-zoom-animated > g > path {
 
 			.Info{
 				margin:5px 0px;
+				font-size:0.9rem;
+				line-height: 1.1rem;
 
 				p{
-					font-size:1.25rem;
-					line-height:1.65rem;
+					font-size:1.05rem;
+					line-height:1.5rem;
 
 					b{
 						font-weight: bold;
@@ -1040,12 +1042,23 @@ svg.leaflet-zoom-animated > g > path {
 			.Note{
 				width:100%;
 				padding:3px 0px;
-				border-top:1px dashed $colorMain;
+				// border-top:1px dashed $colorMain;
 				border-bottom:1px dashed $colorMain;
-				margin-bottom:5px;
-				font-size:1.1rem;
-				line-height: 1.35rem;;
-				font-weight: bold;
+				// margin-bottom:5px;
+				font-size:1.05rem;
+				line-height: 1.5rem;;
+				// font-weight: bold;
+
+				&.Web{
+					margin-bottom:3px;
+					border-bottom:0px;
+					a{
+						font-size:1.05rem;
+						line-height:1.5rem;
+						color:$colorSecond-Blue;
+					}
+					
+				}
 
 			}
 			.Stock{
@@ -1061,7 +1074,7 @@ svg.leaflet-zoom-animated > g > path {
 
 				.Item{
 					width:50%;
-					padding:8px;
+					padding:6px;
 
 					&.AdultMask{
 						background:#00b4dc;
@@ -1077,6 +1090,7 @@ svg.leaflet-zoom-animated > g > path {
 						font-weight: bold;;
 					}
 				}
+
 
 
 			}
@@ -1213,7 +1227,7 @@ svg.leaflet-zoom-animated > g > path {
 
 			select{
 				font-size:1.25rem;
-				width:calc((100% - 40px)/2);
+				width:calc((100% - 0px)/2);
 				border-radius: 8px;
 				margin-right:4px;
 				cursor: pointer;
@@ -1264,8 +1278,8 @@ svg.leaflet-zoom-animated > g > path {
 
 				.InfoTitle{
 					width:calc(100% + 16px);
-					height:35px;
-					font-size:1.45rem;
+					height:31px;
+					font-size:1.35rem;
 					background:$colorMain;
 					color:white;
 					margin-left:-8px;
@@ -1275,12 +1289,13 @@ svg.leaflet-zoom-animated > g > path {
 				}
 				.Info{
 					width:calc(100% - 30% - 5px);
-					font-size:1rem;
-					line-height: 1.15rem;
+					font-size:0.9rem;
+					line-height: 1.1rem;
 
 					p{
-						font-size:1.1rem;
+						font-size:1.05rem;
 						line-height: 1.35rem;
+						font-weight: normal;
 						b{
 							font-weight: bold;
 						}
@@ -1291,12 +1306,24 @@ svg.leaflet-zoom-animated > g > path {
 				.Note{
 					width:calc(100% - 30% - 5px);
 					padding: 3px 0px;
-					border-top: 1px dashed #6CC24A;
+					// border-top: 1px dashed #6CC24A;
 					border-bottom: 1px dashed #6CC24A;
-					margin-bottom: 5px;
-					font-size: 1.1rem;
+					// margin-bottom: 5px;
+					font-size: 1.05rem;
 					line-height: 1.35rem;
-					font-weight: bold;
+					// font-weight: bold;
+
+					&.Web{
+						margin-bottom:3px;
+						border-bottom:0px;
+
+						a{
+							color:$colorSecond-Blue;
+							font-size: 1.05rem;
+							line-height: 1.35rem;
+						}
+						
+					}
 				}
 
 				.Stock{
