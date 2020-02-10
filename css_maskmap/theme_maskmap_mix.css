@@ -292,20 +292,15 @@ Header
   float: left; }
   @media screen and (min-width: 890px) {
     .Row {
-      width: 90%;
-      margin-left: 5%;
-      margin-right: 5%;
+      width: 95%;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; } }
-  @media screen and (min-width: 1351px) {
-    .Row {
-      width: 80%;
-      margin-left: 10%;
-      margin-right: 10%; } }
 
 /* Header- (PushyMenu)  */
 .NavBtn {
@@ -375,7 +370,8 @@ Header
           line-height: 2.25rem; }
           .NavBtn .pushy .InfoText p.Phone, .NavBtn .pushy .InfoText ul.Phone {
             padding: 10px;
-            border: 1px dashed white; }
+            border: 1px dashed #FFEA81;
+            color: #FFEA81; }
             .NavBtn .pushy .InfoText p.Phone b, .NavBtn .pushy .InfoText ul.Phone b {
               font-weight: bold; }
               .NavBtn .pushy .InfoText p.Phone b span, .NavBtn .pushy .InfoText ul.Phone b span {
@@ -403,7 +399,9 @@ Header
               border-color: white;
               padding: 10px 8px;
               -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.35);
-              box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.35); } }
+              box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.35);
+              font-size: 1.68rem;
+              line-height: 1.8rem; } }
     .NavBtn .pushy .BottomInfo {
       background: #55a237;
       width: 100%;
@@ -530,6 +528,35 @@ body.header-fixed.pushy-open-left .NavBtn {
       .NavLogo .SiteBrand .Logo .StanderColor {
         display: block; }
 
+@media screen and (min-width: 890px) {
+  .QuickLink {
+    display: none; } }
+
+.QuickLink ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  .QuickLink ul li {
+    margin: 0px 4px; }
+    .QuickLink ul li:last-of-type {
+      margin-right: 0px; }
+    .QuickLink ul li a {
+      border: 1px solid #6CC24A;
+      padding: 5px;
+      background: #6CC24A;
+      color: white;
+      font-size: 1.05rem;
+      line-height: 1.2rem;
+      border-radius: 6px;
+      display: block;
+      text-align: center; }
+
 .SiteBrand img {
   width: 100%; }
 
@@ -636,8 +663,6 @@ body.header-fixed.pushy-open-left .NavBtn {
       padding: 8px 8px;
       background: white;
       color: #6CC24A;
-      font-size: 1.8rem;
-      line-height: 1.8rem;
       border-radius: 6px;
       display: block; }
       .MenuItem ul li a:hover {
@@ -653,15 +678,17 @@ body.header-fixed.pushy-open-left .NavBtn {
   .MenuItem {
     width: calc(100% - 42.5% - 230px); }
     .MenuItem ul li a {
-      font-size: 1.28rem;
+      font-size: 1.05rem;
       line-height: 1.5rem;
-      text-align: center; } }
+      text-align: center;
+      padding: 8px 5px; } }
 
 @media screen and (min-width: 1100px) {
   .MenuItem {
     width: calc(100% - 44.5% - 230px); }
     .MenuItem ul li a {
-      font-size: 1.4rem; } }
+      font-size: 1.25rem;
+      padding: 8px 8px; } }
 
 /* ************************************************************* 
 End Header
@@ -680,17 +707,27 @@ html, body {
       height: calc(100% - 6px); } }
 
 body {
-  background: #f2efe9; }
+  background: #f2efe9;
+  height: calc(100vh - 88px);
+  margin-top: 88px;
+  top: 0px;
+  position: absolute; }
+  @media screen and (max-width: 889px) {
+    body {
+      height: calc(100% - 60px);
+      margin-top: 60px; } }
 
 #map {
   width: calc(100% - 290px);
-  height: calc(100% - 50px);
+  height: calc(100% - 50px - 12px);
   background: #72bcd4;
   margin-left: 290px; }
-  @media screen and (max-width: 889px) {
+  @media screen and (max-width: 899px) {
     #map {
       width: 100%;
-      margin-left: 0px; } }
+      height: calc(100% - 50px);
+      margin-left: 0px;
+      margin-top: 0px; } }
 
 /* CSS3 Transition to fade-in highlight style */
 svg.leaflet-zoom-animated > g > path {
@@ -714,10 +751,10 @@ svg.leaflet-zoom-animated > g > path {
   margin-top: 20px; }
 
 .leaflet-control-container .leaflet-top .leaflet-control {
-  margin-top: 125px; }
+  margin-top: 40px; }
   @media screen and (max-width: 889px) {
     .leaflet-control-container .leaflet-top .leaflet-control {
-      margin-top: 125px; } }
+      margin-top: 60px; } }
 
 .leaflet-container .leaflet-popup .leaflet-popup-content-wrapper {
   padding: 0px;
@@ -807,7 +844,7 @@ svg.leaflet-zoom-animated > g > path {
   width: 99%;
   background: rgba(0, 138, 169, 0.78);
   position: absolute;
-  top: 62px;
+  top: 5px;
   left: 0.5%;
   z-index: 899; }
   .M-News P {
@@ -836,7 +873,8 @@ svg.leaflet-zoom-animated > g > path {
   background: #6CC24A;
   bottom: 0px;
   height: 50px;
-  z-index: 899; }
+  z-index: 899;
+  position: absolute; }
   @media screen and (min-width: 890px) {
     .M-Panel {
       display: none; } }
@@ -874,9 +912,9 @@ svg.leaflet-zoom-animated > g > path {
 
 .ListPanel {
   width: 280px;
-  height: calc(100% - 165px);
+  height: calc(100% - 80px);
   position: absolute;
-  top: 95px;
+  top: 8px;
   left: 5px;
   background: rgba(255, 255, 255, 0.88);
   padding: 8px;
@@ -1026,7 +1064,7 @@ End [Page]地圖資訊
   margin-right: 0;
   margin-left: 0;
   display: block;
-  padding: 100px 5px 15px; }
+  padding: 25px 5px 15px; }
   @media screen and (min-width: 890px) {
     .PageContent {
       width: 90%;
@@ -1153,6 +1191,59 @@ End [Page]地圖資訊
 
 /* ************************************************************* 
 End [Page]購買須知
+************************************************************* */
+/* ************************************************************* 
+[Page]自製口罩教學
+************************************************************* */
+.Episode {
+  position: relative;
+  padding-bottom: 56.25%;
+  /*16:9*/
+  padding-top: 25px;
+  height: 0; }
+
+.Episode iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+@media screen and (max-width: 780px) {
+  iframe[src*="youtube"] {
+    max-width: 700px; }
+  .fb-video [src*="facebook"] {
+    max-width: 100%;
+    height: auto; } }
+
+.PageContent .PlayVideoBlock {
+  width: 100%;
+  min-height: 300px;
+  color: white;
+  float: left;
+  -webkit-transition: ease-in 0.5s all;
+  -o-transition: ease-in 0.5s all;
+  transition: ease-in 0.5s all; }
+
+.PageContent .Post p {
+  margin-bottom: 20px; }
+  .PageContent .Post p .HightLight {
+    font-size: 1.58rem;
+    line-height: 2.45rem;
+    -webkit-box-shadow: 0 -12px 0 rgba(255, 234, 129, 0.68) inset;
+    box-shadow: 0 -12px 0 rgba(255, 234, 129, 0.68) inset; }
+
+.PageContent .Post h4.Q {
+  width: 100%;
+  background: #55a237;
+  color: white;
+  font-weight: bold;
+  padding: 8px 10px;
+  margin: 15px 0px 5px;
+  border-radius: 8px; }
+
+/* ************************************************************* 
+End [Page]自製口罩教學
 ************************************************************* */
 /*強制*/
 .hidden {
