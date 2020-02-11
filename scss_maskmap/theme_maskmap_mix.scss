@@ -1059,8 +1059,10 @@ svg.leaflet-zoom-animated > g > path {
 					}
 					
 				}
-
+				
 			}
+
+			
 			.Stock{
 				width:100%;
 				// background:gold;
@@ -1071,6 +1073,7 @@ svg.leaflet-zoom-animated > g > path {
 				justify-content: center;
 				text-align: center;
 				font-weight: bold;
+				margin-top:3px;
 
 				.Item{
 					width:50%;
@@ -1291,6 +1294,7 @@ svg.leaflet-zoom-animated > g > path {
 					width:calc(100% - 30% - 5px);
 					font-size:0.9rem;
 					line-height: 1.1rem;
+					margin-top: 3px;
 
 					p{
 						font-size:1.05rem;
@@ -1323,6 +1327,11 @@ svg.leaflet-zoom-animated > g > path {
 							line-height: 1.35rem;
 						}
 						
+					}
+
+					&:last-child(1){
+						margin-bottom:3px;
+						border-bottom:0px;
 					}
 				}
 

@@ -819,7 +819,8 @@ svg.leaflet-zoom-animated > g > path {
   -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-top: 3px; }
   .NewPopup .leaflet-popup-content-wrapper .leaflet-popup-content .Stock .Item {
     width: 50%;
     padding: 6px; }
@@ -1012,7 +1013,8 @@ svg.leaflet-zoom-animated > g > path {
         .ListPanel .StoreList .ListBlock .StoreItem .Info {
           width: calc(100% - 30% - 5px);
           font-size: 0.9rem;
-          line-height: 1.1rem; }
+          line-height: 1.1rem;
+          margin-top: 3px; }
           .ListPanel .StoreList .ListBlock .StoreItem .Info p {
             font-size: 1.05rem;
             line-height: 1.35rem;
@@ -1032,6 +1034,9 @@ svg.leaflet-zoom-animated > g > path {
               color: #008aa9;
               font-size: 1.05rem;
               line-height: 1.35rem; }
+          .ListPanel .StoreList .ListBlock .StoreItem .Note:last-child(1) {
+            margin-bottom: 3px;
+            border-bottom: 0px; }
         .ListPanel .StoreList .ListBlock .StoreItem .Stock {
           width: 30%;
           display: -webkit-box;
