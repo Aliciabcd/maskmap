@@ -186,7 +186,7 @@ $(function () {
 		// 全台機構資料
 		store_layers = []
 		$(".ListBlock").append("<h5>載入地圖範圍內有庫存的藥局中.....</h5>")
-		$.getJSON('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json', function (data) {
+		$.getJSON('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json?', function (data) {
 			
 			$(".ListBlock").html("")
 			// MarkerClusterGroup
@@ -262,7 +262,7 @@ $(function () {
 					"<div class='Note'><b>備註：</b>" + feature.properties.note + "</div>" +
 					"<div class='Note'><b>藥局公告：</b>" + feature.properties.custom_note + "</div>" +
 					// "<div class='Note'><b>服務時段：</b>" + feature.properties.service_periods + "</div>" +
-					// "<div class='Note'><b>說明：</b>" + feature.properties.service_note + "</div>" +
+					"<div class='Note'><b>說明：</b>" + feature.properties.service_note + "</div>" +
 					// "<div class='Note Web'><a href='" + feature.properties.website + " ' target='_blank'>" + feature.properties.website + "</a></div>" +
 					"<div class='Stock'> <div class='Item AdultMask'>成人口罩</br>" + "<div class='Quantity'>" + feature.properties.mask_adult + "</div></div>" +
 					"<div class='Item ChildMask'>小孩口罩</br>" + "<div class='Quantity'>" + feature.properties.mask_child + "</div></div></div>" +
@@ -292,7 +292,7 @@ $(function () {
 				'<div class="Note"><b>備註：</b>' + store.properties.note + '</div>' +
 				"<div class='Note'><b>藥局公告：</b>" + store.properties.custom_note + "</div>" +
 				// "<div class='Note'><b>服務時段：</b>" + store.properties.service_periods+ "</div>" +
-				// "<div class='Note'><b>說明：</b>" + store.properties.service_note + "</div>" +
+				"<div class='Note'><b>說明：</b>" + store.properties.service_note + "</div>" +
 				// "<div class='Note Web'><a href='" + store.properties.website + " ' target='_blank'>" + store.properties.website + "</a></div>" +
 				'<div class="Stock">' +
 				'<div class="Item AdultMask">成人口罩<br>' +
