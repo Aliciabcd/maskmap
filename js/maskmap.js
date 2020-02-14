@@ -134,9 +134,15 @@ $(function () {
 					}
 					add_new_store(store)
 				}
+				$(".M-List .StoreItem").on("click", function () {
+					// console.log("ccc");
+					$(this).closest(".M-List").css('display', 'none');
+					// console.log("ddd");
+				})
 				if (!popup_exists && store_features.length > 0){
 					auto_show_dict_store(store_features[0])
 				}
+
 			})
 
 			
@@ -246,6 +252,14 @@ $(function () {
 					$(".ListBlock").html("<h5>地圖範圍內沒有庫存的地點, 請改用縣市區篩選或授權本頁面您的位置資訊</h5>")
 				}
 			}
+			
+
+			$(".M-List .StoreItem").on("click", function () {
+				// console.log("aaaa");
+				$(this).closest(".M-List").css('display', 'none');
+				// console.log("bbb");
+			})
+
 			map.addLayer(markers);
 			//map.fitBounds(markers.getBounds());	
 			
@@ -332,11 +346,7 @@ $(".OpenListBtn").on("click",function(){
 	
 })
 
-// $(".M-List .StoreItem").on("click",function(){
-// 	console.log(5555);
-// 	$(this).closest(".M-List").css('display', 'none');
-// 	console.log(5562);
-// })
+
 
 
 
