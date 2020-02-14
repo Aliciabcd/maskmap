@@ -838,8 +838,8 @@ svg.leaflet-zoom-animated > g > path {
   width: 150px;
   height: 150px;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35);
-  box-shadow: rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
   padding: 10px;
   position: absolute;
   color: white;
@@ -885,37 +885,188 @@ svg.leaflet-zoom-animated > g > path {
   @media screen and (min-width: 890px) {
     .M-Panel {
       display: none; } }
-  .M-Panel form {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-    .M-Panel form select {
-      font-size: 1.25rem;
-      width: calc((100% - 80px)/2);
-      border-radius: 8px;
-      margin-right: 4px;
-      cursor: pointer; }
-      .M-Panel form select option {
-        font-size: 1.25rem; }
-    .M-Panel form button {
-      font-size: 1.25rem;
-      border-style: solid;
-      width: 60px;
-      border: 1px solid #ff7835;
-      background: #ff7835;
+  .M-Panel select {
+    font-size: 1.25rem;
+    width: calc((100% - 120px)/2);
+    border-radius: 8px;
+    margin-right: 4px;
+    cursor: pointer; }
+    .M-Panel select option {
+      font-size: 1.25rem; }
+  .M-Panel button {
+    font-size: 1.25rem;
+    border-style: solid;
+    width: 60px;
+    border: 1px solid #ff7835;
+    background: #ff7835;
+    color: white;
+    border-radius: 8px;
+    padding: 7px 6px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35); }
+  .M-Panel .OpenListBtn {
+    width: 65px;
+    font-size: 1.25rem;
+    border-style: solid;
+    border: 1px solid #008aa9;
+    background: #008aa9;
+    color: white;
+    border-radius: 8px;
+    padding: 7px 6px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+    float: left;
+    text-align: center; }
+
+.M-List {
+  width: 100%;
+  height: calc(100% - 50px);
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  position: absolute;
+  bottom: 50px;
+  left: 0px; }
+  @media screen and (min-width: 889px) {
+    .M-List {
+      display: none; } }
+  .M-List .M-ListWrap {
+    width: calc(100% - 20px);
+    height: calc(100% - 10px);
+    background: rgba(255, 255, 255, 0.75);
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    overflow-y: scroll;
+    border: 5px solid black; }
+    .M-List .M-ListWrap .CloseListBtn {
+      width: calc(100% - 25px);
+      line-height: 2.8rem;
+      background: black;
       color: white;
-      border-radius: 8px;
-      padding: 7px 6px;
-      cursor: pointer;
-      -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
-      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35); }
+      font-size: 1.65rem;
+      text-align: center;
+      position: fixed;
+      z-index: 1002; }
+    .M-List .M-ListWrap .ListBlock {
+      width: calc(100% - 20px);
+      height: 100%;
+      position: absolute;
+      top: calc(3rem + 5px);
+      left: 8px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .M-List .M-ListWrap .ListBlock h5 {
+        width: 80%;
+        height: 60px;
+        display: block;
+        text-align: center;
+        margin-top: -120px;
+        position: relative; }
+      .M-List .M-ListWrap .ListBlock .StoreItem {
+        width: 100%;
+        min-height: 155px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 8px;
+        cursor: pointer;
+        border-bottom: 1px solid #97A8B9;
+        margin-bottom: 5px;
+        position: relative;
+        background: rgba(255, 255, 255, 0.58);
+        -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.85);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.85); }
+        .M-List .M-ListWrap .ListBlock .StoreItem:hover {
+          -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
+        .M-List .M-ListWrap .ListBlock .StoreItem .InfoTitle {
+          width: calc(100% + 16px);
+          height: 31px;
+          font-size: 1.35rem;
+          background: #6CC24A;
+          color: white;
+          margin-left: -8px;
+          margin-right: -8px;
+          margin-top: -8px;
+          padding: 5px; }
+        .M-List .M-ListWrap .ListBlock .StoreItem .Info {
+          width: calc(100% - 30% - 5px);
+          font-size: 0.9rem;
+          line-height: 1.1rem;
+          margin-top: 3px; }
+          .M-List .M-ListWrap .ListBlock .StoreItem .Info p {
+            font-size: 1.05rem;
+            line-height: 1.35rem;
+            font-weight: normal; }
+            .M-List .M-ListWrap .ListBlock .StoreItem .Info p b {
+              font-weight: bold; }
+        .M-List .M-ListWrap .ListBlock .StoreItem .Note {
+          width: calc(100% - 30% - 5px);
+          padding: 3px 0px;
+          border-bottom: 1px dashed #6CC24A;
+          font-size: 1.05rem;
+          line-height: 1.35rem; }
+          .M-List .M-ListWrap .ListBlock .StoreItem .Note.Web {
+            margin-bottom: 3px;
+            border-bottom: 0px; }
+            .M-List .M-ListWrap .ListBlock .StoreItem .Note.Web a {
+              color: #008aa9;
+              font-size: 1.05rem;
+              line-height: 1.35rem; }
+          .M-List .M-ListWrap .ListBlock .StoreItem .Note:last-child(1) {
+            margin-bottom: 3px;
+            border-bottom: 0px; }
+        .M-List .M-ListWrap .ListBlock .StoreItem .Stock {
+          width: 30%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          position: absolute;
+          top: 38px;
+          right: 0px;
+          text-align: center; }
+          .M-List .M-ListWrap .ListBlock .StoreItem .Stock .Item {
+            width: 100%;
+            padding: 8px;
+            font-size: 1rem;
+            line-height: 1.1rem; }
+            .M-List .M-ListWrap .ListBlock .StoreItem .Stock .Item .Quantity {
+              font-size: 2rem;
+              line-height: 2.25rem;
+              color: white;
+              font-weight: bold; }
+            .M-List .M-ListWrap .ListBlock .StoreItem .Stock .Item.AdultMask {
+              background: #00b4dc; }
+            .M-List .M-ListWrap .ListBlock .StoreItem .Stock .Item.ChildMask {
+              background: #ffd44d; }
 
 .ListPanel {
   width: 280px;
@@ -977,7 +1128,25 @@ svg.leaflet-zoom-animated > g > path {
     .ListPanel .StoreList .ListBlock {
       width: calc(100% + 16px);
       margin-top: 8px;
-      margin-left: -8px; }
+      margin-left: -8px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .ListPanel .StoreList .ListBlock h5 {
+        width: 80%;
+        height: 60px;
+        display: block;
+        text-align: left;
+        margin-top: 120px;
+        position: relative; }
       .ListPanel .StoreList .ListBlock .StoreItem {
         width: 100%;
         min-height: 155px;
